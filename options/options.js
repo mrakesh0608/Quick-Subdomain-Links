@@ -28,7 +28,6 @@ function initDOM() {
                 if (granted) {
                     console.log('success');
                     alert('Sucessfully domain configuration is done');
-                    window.opener();
         
                 } else alert("Permission must be granted, otherwise extension won't work.\n\nTry again by clicking the save button.")
             }
