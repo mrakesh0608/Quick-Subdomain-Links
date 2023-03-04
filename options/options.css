@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+.container {
+    width: 75%;
+    padding: 20px;
+}
+@media (max-width:700px){
+    .container{
+        width: 90%;
+    }
+}
+/* Form Elements Starts */
+.input-label {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* Input Label Stars */
+.form__input {
+    width: 100%;
+    background: transparent;
+    border: 2px solid gray;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    padding: 12px 14px;
+}
+
+.form__input:focus {
+    border: 2px solid #3F51B5;
+}
+
+.form__input:not(:focus)::placeholder {
+    color: transparent;
+}
+
+.form__label {
+    background-color: white;
+    color: #3F51B5;
+    position: absolute;
+    padding: 0 4px;
+    left: 12px;
+    top: 1rem;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+    cursor: text;
+}
+
+.form__input:not(:focus)~.form__label {
+    color: black;
+}
+
+.form__input:focus~.form__label,
+.form__input:not(:placeholder-shown)~.form__label {
+    top: -0.5rem;
+    color: gray;
+}
+
+/* Input Label Ends */
+/* Btn Styles Starts */
+.btn-containers {
+    margin:20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container button{
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+
+}
+
+.btn-containers button{
+    /* width: 100%; */
+    padding: 10px 14px;
+    /* margin: 10px 0; */
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button#add-subdomain {
+    display: flex;
+    align-items: center;
+
+    background-color: transparent;
+    color: lightseagreen;
+
+    border: 1px dashed lightseagreen;
+}
+
+button#add-subdomain:hover {
+    border-style: solid;
+}
+
+button#save {
+    background-color: #3F51B5;
+}
+
+button#reset {
+    background-color: red;
+}
+
+/* Btn Styles Ends */
+hr {
+    margin: 5px 0;
+    border-bottom: 1px solid gray;
+}
+
+/* Form Elements Ends */
+
+.icon-text {
+    font-size: 30px;
+    line-height: 0;
+    margin-right: 6px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:active {
+    transform: scale(1.1);
+}
+
+/* subdomain Starts*/
+.subdomain-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-svg {
+    /* make svg center in btn */
+    padding-top: 3px;
+}
+
+.btn-svg:hover {
+    transition: fill 0.3s;
+}
+
+.btn-close:hover {
+    fill: red;
+}
+.subdomains-container:only-child .btn-close{
+    display: none;
+}
+/*  subdomain Ends*/

@@ -1,17 +1,18 @@
-const domain = 'google';
+chrome.runtime.onMessage.addListener(async (request, sender, response) => {
 
-chrome.runtime.onMessage.addListener(async (obj, sender, response) => {
-    const { type, value } = obj;
+    const { type, values } = request;
 
     if (type === "NEW") {
-        console.log('google page');
+        console.log(`Its a ${values.domain} page`);
         return true;
     }
     else if (type === 'WINDOW_OPEN') {
 
+        const { subdomain, domain } = values;
+
         const href = location.href;
         const end = href.slice(href.indexOf(domain) - 1);
-        const url = location.protocol + '//' + value + end;
+        const url = location.protocol + '//' + subdomain + end;
 
         console.log(`opening \n${url}`);
         window.open(url);

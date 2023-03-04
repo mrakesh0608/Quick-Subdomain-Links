@@ -5,6 +5,7 @@
 
 body {
     background-color: #212121;
+    background-color: #3b3b3b;
 }
 
 .container {
@@ -67,6 +68,18 @@ ul {
 .c-blue {
     color: #1e90ff;
 }
+
 .cptlz{
     text-transform: capitalize;
+}
+button{
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.element-center{
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+    padding: 5px;
 }
